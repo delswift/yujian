@@ -148,9 +148,7 @@ flowchart LR
 - 套餐卡 / 次卡 / 积分等会员资产体系
 - 连锁门店数据汇总与经营分析
 
-这个收费模型的核心逻辑是：
 
-> **先低门槛进入门店，再用高价值功能完成续费转化。**
 
 ---
 
@@ -172,7 +170,7 @@ flowchart LR
 
 ## 快速开始
 
-### 方式一：直接使用发布包
+### 方式：直接使用发布包
 如果你拿到的是已经打包好的客户发布文件，直接运行：
 
 ```text
@@ -187,92 +185,12 @@ flowchart LR
 > 系统**没有默认账号和默认密码**，首次安装时由门店自行创建。
 
 ---
-
-### 方式二：本地开发启动
-
-### 1. 前端构建
-```powershell
-cd frontend
-npm install
-npm run build
-```
-
-### 2. 后端打包
-```powershell
-mvn -DskipTests package
-```
-
-### 3. 本地运行
-```powershell
-java -cp "target\ddmo-1.0.0.jar;target\lib\*" com.ddmo.app.DdmoLauncher
-```
-
----
-
-## 打包 Windows 单机版
-
-```powershell
-.\build-single-file.ps1
-```
-
-打包产物：
-
-```text
-dist\御剪单机版.exe
-```
-
-默认本地数据库路径：
-
-```text
-%LOCALAPPDATA%\Yujian\data\yujian.db
-```
-
----
-
-## 官方云计费服务
-
-如果你需要跑正式的订阅收费链路，可继续部署官方云计费服务。
-
-它负责：
-- 试用授权
-- 续费下单
-- 支付回调
-- 订单作废 / 退款
-- 补单重试
-- 支付对账日报
-- 运维后台告警 / 日报 / 补单日志
-
-相关脚本：
-
-```powershell
-.\build-cloud-billing-server-bundle.ps1
-```
-
-相关文档：
-- [官方云计费服务部署说明](docs/official-cloud-billing-server-deployment.md)
-- [官方云计费服务说明](docs/official-cloud-billing-guide.md)
-- [生产部署说明](docs/production-deployment-guide.md)
-- [支付运维说明](docs/payment-ops-guide.md)
-- [支付生产联调清单](docs/payment-production-final-checklist.md)
-- [支付回调验签上线检查表](docs/payment-callback-signature-go-live-checklist.md)
-
 ---
 
 ## 文档目录
 
 ### 项目文档
-- [御剪-项目总结](docs/御剪-项目总结.md)
-- [御剪-部署教程](docs/御剪-部署教程.md)
 - [御剪-操作手册](docs/御剪-操作手册.md)
-
-### 对外交付文档
-- [御剪-最终交付版说明书](docs/御剪-最终交付版说明书.md)
-- [御剪-门店老板简版使用手册](docs/御剪-门店老板简版使用手册.md)
-
-### 发行方 / 支付配置文档
-- [开发者支付网关说明](docs/developer-payment-gateway-guide.md)
-- [官方云计费服务部署说明](docs/official-cloud-billing-server-deployment.md)
-- [支付运维说明](docs/payment-ops-guide.md)
 
 ---
 
@@ -290,16 +208,6 @@ dist\御剪单机版.exe
 
 ---
 
-## 下一步最值得继续增强的方向
-
-- 微信小程序预约
-- 短信营销
-- 库存耗材管理
-- 自动更新能力
-- 打印模板扩展（80mm 热敏纸 / 不同标签尺寸 / 指定打印机）
-
----
-
 ## 项目亮点总结
 
 如果你想找的是一套：
@@ -309,7 +217,7 @@ dist\御剪单机版.exe
 - **方便发行和收费**
 - **还能继续演进成连锁经营系统**
 
-那么御剪不是“只能看”的后台，而是一套**可以拿去卖、拿去装、拿去续费、拿去长期演进**的产品底座。
+那么御剪不是“只能看”的后台，而是一套**可以拿去卖、拿去装、拿去续费、拿去长期演进**的产品。
 
 ---
 
@@ -326,4 +234,4 @@ dist\御剪单机版.exe
 
 ## License
 
-如需商用发行、二次定制或代理合作，请结合你的实际授权策略自行补充 License 与商务说明。
+如需商用发行、二次定制或代理合作，请结合你的实际授权策略License 与商务说明。
