@@ -1,8 +1,6 @@
 # 御剪
 
-<p align="center">
-  <img src="logo.png" alt="御剪" width="120" />
-</p>
+
 
 <p align="center">
   面向理发店 / 美发门店的经营管理系统<br/>
