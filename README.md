@@ -184,25 +184,6 @@ flowchart LR
 
 ---
 
-## 本地开发启动
-
-### 1. 前端构建
-```powershell
-cd frontend
-npm install
-npm run build
-```
-
-### 2. 后端打包
-```powershell
-mvn -DskipTests package
-```
-
-### 3. 本地运行
-```powershell
-java -cp "target\ddmo-1.0.0.jar;target\lib\*" com.ddmo.app.DdmoLauncher
-```
-
 ---
 
 ## 打包 Windows 单机版
@@ -237,16 +218,6 @@ dist\御剪单机版.exe
 - 支付对账日报
 - 开发者运维后台
 
-相关脚本：
-
-```powershell
-.\build-cloud-billing-server-bundle.ps1
-```
-
-相关文档：
-- [官方云计费服务部署说明](docs/official-cloud-billing-server-deployment.md)
-- [生产部署说明](docs/production-deployment-guide.md)
-- [支付运维说明](docs/payment-ops-guide.md)
 
 ---
 
@@ -273,18 +244,13 @@ dist\御剪单机版.exe
 - 可以对接官方云计费服务
 - 可以通过运维后台看告警、补单和日报
 
-如果继续往下打磨，下一步最值得增强的方向一般是：
-- 小票打印 / 标签打印
-- 微信小程序预约
-- 短信营销
-- 库存耗材管理
-- 自动更新能力
+
 
 ---
 
-## 发布包建议
+## 发布包
 
-正式发客户时，建议至少包含：
+包含：
 
 - `御剪单机版.exe`
 - `御剪-最终交付版说明书.pdf`
